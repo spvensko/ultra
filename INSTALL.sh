@@ -19,6 +19,7 @@ echo
 echo "SETTING UP CONDA ENVIRONMENT"
 echo
 conda create --yes -n ultra python=3.8 pip 
+conda init bash
 conda activate ultra
 
 # Install uLTRA
