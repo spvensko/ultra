@@ -1,7 +1,5 @@
 #!/bin/bash
 
-conda init bash
-
 set -e
 if [ $# -ne 1 ]; then
         echo "Usage: `basename $0` <installation_path> "
@@ -22,6 +20,7 @@ echo
 echo "SETTING UP CONDA ENVIRONMENT"
 echo
 conda create --yes -n ultra python=3.8 pip 
+conda init
 conda activate ultra
 
 # Install uLTRA
