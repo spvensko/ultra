@@ -19,9 +19,8 @@ echo
 # Create and activate a new environment called ultra
 echo "SETTING UP CONDA ENVIRONMENT"
 echo
-conda create --yes -n ultra python=3.8 pip 
-conda init
-conda activate ultra
+conda create --yes -n base python=3.8 pip 
+conda activate base
 
 # Install uLTRA
 echo
