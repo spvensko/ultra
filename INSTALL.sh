@@ -34,7 +34,7 @@ echo
 installed_namfinder=false
 if ! command -v namfinder &> /dev/null
 then
-    conda install bioconda namfinder
+    conda install -c bioconda namfinder
 fi
 
 # Install aligner minimap2
@@ -45,7 +45,7 @@ echo
 installed_mm2=false
 if ! command -v minimap2 &> /dev/null
 then
-    conda install bioconda minimap2
+    conda install -c bioconda minimap2
 fi
 
 
