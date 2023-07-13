@@ -34,18 +34,7 @@ echo
 installed_namfinder=false
 if ! command -v namfinder &> /dev/null
 then
-    echo "namfinder not found in path. Installing"
-    git clone https://github.com/ksahlin/namfinder
-    cd namfinder
-    cmake -B build -DCMAKE_C_FLAGS="-march=native" -DCMAKE_CXX_FLAGS="-march=native"
-    make -j -C build 
-    mv namfinder $path
-    echo
-    echo "I have put namfinder in:" $path " please make sure that this folder is in your path, or move namfinder to your path"
-    echo
-    cd ..
-    rm -rf namfinder
-    installed_namfinder=true
+    conda install bioconda namfinder
 fi
 
 # Install aligner minimap2
@@ -56,17 +45,7 @@ echo
 installed_mm2=false
 if ! command -v minimap2 &> /dev/null
 then
-    echo "minimap2 not found in path. Installing"
-    git clone https://github.com/lh3/minimap2
-    cd minimap2 && make
-    mv minimap2 $path
-
-    echo
-    echo "I have put minimap2 in:" $path " please make sure that this folder is in your path, or move minimap2 to your path"
-    echo
-    cd ..
-    rm -rf minimap2
-    installed_mm2=true
+    conda install bioconda minimap2
 fi
 
 
